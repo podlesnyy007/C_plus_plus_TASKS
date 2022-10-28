@@ -16,3 +16,21 @@ int main() {
 	f(x);
 	cout << x;
 }
+
+
+
+#include <iostream>
+using namespace std;
+#include<algorithm>
+
+int main() {
+	int n, k = 0, x;
+	cin >> n;
+	while (n < k) {
+		int s;
+		cin >> s;
+		x = max(x, s);
+		k++;
+	}
+	cout << x;
+}
