@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int f(int x) {
+int f(int &x) {
 	if(x % 2 == 0) {
 		return x /= 2;
 	}
