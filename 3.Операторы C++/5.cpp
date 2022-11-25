@@ -2,8 +2,8 @@
 using namespace std;
 #include <cmath>
 
-void f(double &x) {
-    if (x == sqrt(2) || x < 0)
+void f(double& x) {
+    if (x == sqrt(2) || x*x*x < 1)
         cout << "функция не определена";
     else
         cout << ((x + 4) / (pow(x, 2) - 2)) + sqrt(pow(x, 3) - 1);
