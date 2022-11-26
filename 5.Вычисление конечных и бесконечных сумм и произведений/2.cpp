@@ -3,7 +3,8 @@ using namespace std;
 
 int main() 
 {
-    double k, x, f = 1, h = 1;
+    int k;
+    double x, f = 1, h = 1;
     cin >> k >> x;
     for (int i = 1; i <= k; i++) {
         f *= i;
