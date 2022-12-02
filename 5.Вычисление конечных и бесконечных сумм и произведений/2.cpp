@@ -3,8 +3,8 @@ using namespace std;
 
 int main() 
 {
-    int k;
-    double x, f = 1, h = 1;  // f - факториал
+    int k; // до какого числа
+    double x, f = 1, h = 1;  // f - факториал, h - произведение
     cin >> k >> x;
     for (int i = 1; i <= k; i++) {
         f *= i;
