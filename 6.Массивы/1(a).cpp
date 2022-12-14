@@ -16,8 +16,8 @@ int main()
 {
     setlocale(LC_ALL, "Rus");
     int a[20];
-    int n, k = 0;
-    float s = 0;
+    int n, k = 0; // k - количество отрицательных элементов
+    float s = 0; // s - сумма отрицательных элементов
     cout << "n = ";
     cin >> n;
     for (int i = 0; i < n; i++) {
