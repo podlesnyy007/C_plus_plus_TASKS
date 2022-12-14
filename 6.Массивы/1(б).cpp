@@ -18,8 +18,8 @@ int main()
 {
     setlocale(LC_ALL, "Rus");
     int a[10][10];
-    int x, y, k = 0;
-    float s = 0;
+    int x, y, k = 0; // k - количество отрицательных элементов
+    float s = 0; // s - сумма отрицательных элементов
     cout << "x = "; cin >> x;
     cout << "y = "; cin >> y;
     for (int i = 0; i < x; i++) {
