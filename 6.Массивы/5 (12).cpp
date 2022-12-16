@@ -27,7 +27,7 @@ int main()
 	for (int i = 0; i < n - 1; i++) {
 		for (int j = i + 1; j < n; j++)
 			if (a[i] == a[j]) {
-				for (int k = j; k < n; k++)
+				for (int k = j; k < n - 1; k++)
 					a[k] = a[k + 1];
 				n--;
 				j--; // т.к удалили элемент j и на его место поставили элемент j+1
