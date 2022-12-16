@@ -1,3 +1,11 @@
+/*
+Вводимые значения
+0.1
+0.9
+0.1
+0.00001
+*/
+
 #include <iostream>
 #include <cmath>
 #include <iomanip>
