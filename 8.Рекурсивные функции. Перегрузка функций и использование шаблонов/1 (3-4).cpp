@@ -18,7 +18,7 @@ using namespace std;
 
 int f(int n) {
 	int sum = 0;
-	for (int i = 2; n > i; i++) {
+	for (int i = 1; n >= i; i++) {
 		sum += i * (n % i == 0);
 	}
 	return sum;
