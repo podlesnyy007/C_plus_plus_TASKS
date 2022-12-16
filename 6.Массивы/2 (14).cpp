@@ -31,5 +31,5 @@ int main()
         }
     }
     cout << x;
-    delete[] a;
+    delete[] mas;
 }
