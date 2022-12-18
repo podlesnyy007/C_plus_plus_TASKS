@@ -3,32 +3,28 @@ using namespace std;
 
 int main()
 {
-    int n, x; //n - размер массива, x - элемент, который нужно вставить
-    cout << "n = "; cin >> n;
-    cout << "x = "; cin >> x;
-    int m = n * 2;
-    int* mass = new int[m];
+    int n, k;
+    cout << "n = "; cin >> n; //n - количество элементов в массиве
+    cout << "k = "; cin >> k; //k - элемент, который нужно вставить
+    int m = 2 * n;
+    int* a = new int[m];
     for (int i = 0; i < n; i++) {
-        cin >> mass[i];
+        cin >> a[i];
     }
-    for (int i = n; i >= 0; i--) {
-        int temp = 0;
-        temp = mass[i];
-        while (temp) {
-            if (temp % 10 == x) {
-                for (int j = m; j > i; j--) {
-                    mass[j] = mass[j - 1];
-                }
-                mass[i] = x;
+    for (int i = n - 1; i >= 0; i--) {
+        int h = a[i];
+        while (h > 0) {
+            if (h % 10 == k) {
+                for (int j = n; j > i; j--)
+                    a[j] = a[j - 1];
+                a[i] = k;
                 n++;
                 break;
             }
-            temp /= 10;
+            h /= 10;
         }
     }
     for (int i = 0; i < n; i++) {
-        cout << mass[i] << " ";
+        cout << a[i] << " ";
     }
-    system("pause");
-    return 0;
 }
