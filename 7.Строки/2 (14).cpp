@@ -2,6 +2,13 @@
 Даны символ C и строки S, S0. После каждого вхождения символа C в строку S вставить строку S0.
 */
 
+/*
+s = hello
+s0 = w
+c = l
+Ответ: helwlwo
+*/
+
 #include <iostream>
 #include <cstring>
 #include <string>
