@@ -26,7 +26,7 @@ int main()
 	ofstream out("g.txt"); 
 	string str;
 	int i = 1;
-	while (getline(in, str)) //считываем значение из потока in в переменную str
+	while (getline(in, str)) //считываем значение из потока in в переменную str построчно
 		out << str << " " << i++ << endl; //помещаем значение переменной str в поток out
 	in.close();
 	out.close();
