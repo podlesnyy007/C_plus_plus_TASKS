@@ -1,6 +1,5 @@
 #include<fstream>
 #include<iostream>
-#include<iomanip>
 using namespace std;
 
 ifstream in("input.txt"); //открываем глобальные файловые потоки
@@ -14,18 +13,19 @@ struct work {
 };
 
 void work::show() {
-	cout << setw(15) << surname << setw(11) << name << setw(16) << patronymic << setw(20) << post
-		<< setw(8) << year_of_work << setw(10) << salary << setw(1) << work_experience << endl;
+	setlocale(LC_ALL, "Rus");
+	cout << surname << " " << name << " " << patronymic << " " << post
+		<< " " << year_of_work << " " << salary << " " << work_experience << endl;
 }
 void work::print() {
-	out << setw(15) << surname << setw(11) << name << setw(16) << patronymic << setw(20) << post
-		<< setw(8) << year_of_work << setw(10) << salary << setw(1) << work_experience << endl;
+	out << surname << " " << name << " " << patronymic << " " << post
+		<< " " << year_of_work << " " << salary << " " << work_experience << endl;
 }
 
 int main()
 {
 	work worker[20]; //описываем массив структур
-	int n = 0, min_zp; //n - номер элемента массива
+	int n = 0, i, j, min_zp; //n - номер элемента массива
 	if (!in)
 		cout << "Ошибка при открытии файла input.txt";
 	else
@@ -45,13 +45,15 @@ int main()
 	if (!out)
 		cout << "Ошибка при открытии файла output.txt";
 	else {
-		int j = 0;
-		for (int i = 0; i < n && i != j; i++)
-			if (worker[i].salary < min_zp) {
-				for (j = i; j < n - 1; j++) //выполняем сдвиг в массиве на одну позицию вправо
+		j = 0;
+		for (i = 0; i < n; i++) {
+			if (worker[i].salary > min_zp) {
+				for (j = i; j < n - 1; j++)
 					worker[j] = worker[j + 1];
-				n--; //уменьшаем количество сотрудников на 1 после удаления
+				n--;
+				i--;
 			}
+		}//уменьшаем количество сотрудников на 1 после удаления
 		for (int i = 0; i < n; i++)//записываем результат в новый файл
 			worker[i].print(); //вывод данных в файл через член-функцию структуры 
 	}
