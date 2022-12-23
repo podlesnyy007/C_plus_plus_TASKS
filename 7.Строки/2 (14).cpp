@@ -18,7 +18,7 @@ int main()
 {
     char c;
     string s, s0;
-    cout << "s = ";  getline(cin, s);
+    cout << "s = ";  getline(cin, s); //вводим строку целиком а переменную s
     cout << "s0 = ";  getline(cin, s0);
     cout << "c = "; cin >> c;
     string res;
