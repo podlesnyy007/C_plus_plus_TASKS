@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-	ofstream out("f.dat", ios::binary);
+	ofstream out("f.dat", ios::binary); 
 	double n, h, m;
 	cout << "n = "; cin >> n;
 	cout << "h = "; cin >> h;
@@ -17,8 +17,8 @@ int main() {
 		out.write((char*)&m, sizeof(double)); //функция записывает в поток из m столько байт, сколько есть в double
 	}
 	out.close();
-	ifstream in("f.dat", ios::binary);
-	while (in.peek() != EOF) {
+	ifstream in("f.dat", ios::binary); //открываем входной поток для открытия двоичного файла
+	while (in.peek() != EOF) { //пока не конец файла
 		//читаем файлы из двоичного файла
 		in.read((char*)&m, sizeof(double)); //функция считывает из потока из m столько байт, сколько есть в double
 		if (m > h)
